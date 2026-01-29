@@ -1,0 +1,365 @@
+/* CSS Custom Properties for Zara-like Minimalism */
+:root {
+  --primary-bg: #ffffff; /* White */
+  --secondary-bg: #f9f9f9; /* Light Gray */
+  --text-color: #000000; /* Black */
+  --accent-color: #cccccc; /* Gray for accents */
+  --button-bg: #000000; /* Black buttons */
+  --button-hover: #333333; /* Darker hover */
+  --transition: all 0.3s ease;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--primary-bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--primary-bg);
+  border-bottom: 1px solid var(--accent-color);
+  z-index: 1000;
+  box-shadow: 0 2px 5px var(--shadow);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+  transition: var(--transition);
+}
+
+.nav-list a:hover {
+  color: var(--accent-color);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#search {
+  padding: 8px 12px;
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
+  font-family: inherit;
+  outline: none;
+}
+
+.cart-btn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: var(--button-bg);
+  color: var(--primary-bg);
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+}
+
+/* Hero */
+.hero {
+  margin-top: 80px; /* Account for fixed header */
+}
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: var(--primary-bg);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Collections */
+.collections {
+  background: var(--secondary-bg);
+}
+
+.collections h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background: var(--primary-bg);
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.filter-btn.active {
+  background: var(--text-color);
+  color: var(--primary-bg);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: var(--primary-bg);
+  text-align: center;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px var(--shadow);
+}
+
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card h3 {
+  margin: 15px 0 5px;
+  font-size: 1.1rem;
+}
+
+.product-card p {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 0; /* Zara-style sharp edges */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  border: 1px solid var(--text-color);
+  background: var(--primary-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn:hover {
+  background: var(--text-color);
+  color: var(--primary-bg);
+}
+
+.btn-primary {
+  background: var(--text-color);
+  color: var(--primary-bg);
+}
+
+.btn-secondary {
+  background: var(--primary-bg);
+  color: var(--text-color);
+}
+
+.btn-outline {
+  background: transparent;
+}
+
+/* About */
+.about {
+  text-align: center;
+  background: var(--primary-bg);
+}
+
+.about p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+/* Footer */
+.footer {
+  background: var(--text-color);
+  color: var(--primary-bg);
+  padding: 40px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section a {
+  color: var(--primary-bg);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-section a:hover {
+  color: var(--accent-color);
+}
+
+.footer input {
+  padding: 8px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 0;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background: var(--primary-bg);
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#modal-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-list {
+    gap: 15px;
+  }
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}

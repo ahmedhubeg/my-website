@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ahmed - Modern luxury fashion. Discover premium collections inspired by timeless elegance.">
+  <meta name="keywords" content="luxury fashion, Ahmed, modern collections, premium clothing">
+  <title>Ahmed - Modern Luxury Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Link to CSS: <link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo" aria-label="Ahmed homepage">Ahmed_hub</a>
+        <nav class="nav" role="navigation">
+          <ul class="nav-list">
+            <li><a href="#women">Women</a></li>
+            <li><a href="#men">Men</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <input type="search" id="search" placeholder="Search..." aria-label="Search products">
+          <button class="cart-btn" aria-label="Shopping cart">
+            <span class="cart-icon">🛒</span>
+            <span id="cart-count" class="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" role="banner">
+      <div class="hero-banner">
+        <img src="https://source.unsplash.com/featured/?luxury,fashion&w=1920&h=600" alt="Hero banner showcasing Ahmed's latest collection" loading="lazy">
+        <div class="hero-overlay">
+          <h1>New Collection</h1>
+          <p>Timeless luxury for the modern individual.</p>
+          <a href="#collections" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections section" aria-labelledby="collections-heading">
+      <div class="container">
+        <h2 id="collections-heading">Collections</h2>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="women">Women</button>
+          <button class="filter-btn" data-filter="men">Men</button>
+          <button class="filter-btn" data-filter="accessories">Accessories</button>
+        </div>
+        <div class="product-grid">
+          <article class="product-card" data-category="women">
+            <img src="https://source.unsplash.com/featured/?luxury,dress&w=400&h=500" alt="Elegant dress from women's collection" loading="lazy">
+            <h3>Elegant Dress</h3>
+            <p>$450</p>
+            <button class="btn btn-secondary add-to-cart" data-product="1">Add to Cart</button>
+            <button class="btn btn-outline view-details" data-product="1">View Details</button>
+          </article>
+          <article class="product-card" data-category="men">
+            <img src="https://source.unsplash.com/featured/?luxury,suit&w=400&h=500" alt="Premium suit from men's collection" loading="lazy">
+            <h3>Premium Suit</h3>
+            <p>$600</p>
+            <button class="btn btn-secondary add-to-cart" data-product="2">Add to Cart</button>
+            <button class="btn btn-outline view-details" data-product="2">View Details</button>
+          </article>
+          <article class="product-card" data-category="accessories">
+            <img src="https://source.unsplash.com/featured/?luxury,watch&w=400&h=500" alt="Luxury watch from accessories" loading="lazy">
+            <h3>Luxury Watch</h3>
+            <p>$300</p>
+            <button class="btn btn-secondary add-to-cart" data-product="3">Add to Cart</button>
+            <button class="btn btn-outline view-details" data-product="3">View Details</button>
+          </article>
+          <!-- Add more products as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading">About Ahmed</h2>
+        <p>Ahmed redefines luxury with minimalist design and premium craftsmanship. Discover our story.</p>
+        <a href="#about" class="btn btn-primary">Learn More</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="https://wa.me/201552810428">Contact Us</a></li>
+            <li><a href="https://wa.me/201552810428">Shipping</a></li>
+            <li><a href="https://wa.me/201552810428">Returns</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <p> <a href="https://www.instagram.com/ahmed_hub.eg?igsh=emxvc2NxYm5rbnYy"> Instagram </p>
+          <p> <a href="https://www.tiktok.com/@_ahmed_ms?_r=1&_t=ZS-93U7MlGbiYn">TikTok
+        </div>
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <input type="email" placeholder="Enter email" aria-label="Subscribe to newsletter">
+          <button class="btn btn-primary">Subscribe</button>
+        </div>
+      </div>
+      <p>&copy; Ahmed. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal for Product Details -->
+  <div id="product-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <span class="close-modal" aria-label="Close modal">&times;</span>
+      <h3 id="modal-title">Product Details</h3>
+      <img id="modal-image" src="" alt="Product image" loading="lazy">
+      <p id="modal-description">Details will load here.</p>
+      <button class="btn btn-secondary add-to-cart-modal">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Link to JS: <script src="script.js"></script> -->
+</body>
+
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
